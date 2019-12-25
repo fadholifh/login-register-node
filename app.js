@@ -3,7 +3,8 @@ const expressLayout = require('express-ejs-layouts');
 
 const app = express();
 //ejs
-
+app.use(expressLayout);
+app.set('view engine', 'ejs');
 
 //routes
 app.use('/', require('./routes/index'));
